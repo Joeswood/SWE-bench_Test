@@ -1,0 +1,99 @@
+
+*** Begin Patch
+*** Update File: astropy/io/ascii/html.py
+@@
+ 
+     max_ndim = 2  # HTML supports writing 2-d columns with shape (n, m)
+ 
+-    def __init__(self, htmldict={}):
++    def __init__(self, htmldict={}, **kwargs):
+         """
+         Initialize classes for HTML reading and writing.
+         """
+         super().__init__()
+         self.html = deepcopy(htmldict)
+         if 'multicol' not in htmldict:
+             self.html['multicol'] = True
+         if 'table_id' not in htmldict:
+             self.html['table_id'] = 1
++        # Store user-supplied formats (e.g., from io.ascii.write(..., formats={...}))
++        # Accept and ignore any other unexpected kwargs for forward compatibility.
++        self.formats = deepcopy(kwargs.get('formats', {})) if kwargs is not None else {}
+         self.inputter.html = self.html
+ 
+     def read(self, table):
+         """
+         Read the ``table`` in HTML format and return a resulting ``Table``.
+@@     def write(self, table):
+ 
+         lines = []
+ 
++        # Apply user-supplied column formats (if any) by temporarily setting
++        # Column.info.format. This leverages the existing TableFormatter pipeline
++        # used by iter_str_vals() and supports both strings and callables.
++        # Save originals to restore after writing to avoid side effects.
++        orig_formats = {col.info.name: getattr(col.info, 'format', None) for col in cols}
++        user_formats = self.formats if isinstance(self.formats, dict) else {}
++        try:
++            for col in cols:
++                name = col.info.name
++                if name in user_formats:
++                    col.info.format = user_formats[name]
++        except Exception:
++            # If something goes wrong when applying formats, restore originals
++            for col in cols:
++                col.info.format = orig_formats.get(col.info.name, None)
++            raise
++
+         # Set HTML escaping to False for any column in the raw_html_cols input
+         raw_html_cols = self.html.get('raw_html_cols', [])
+         if isinstance(raw_html_cols, str):
+             raw_html_cols = [raw_html_cols]  # Allow for a single string as input
+         cols_escaped = [col.info.name not in raw_html_cols for col in cols]
+@@
+                         for col, col_escaped in zip(cols, cols_escaped):
+                             if len(col.shape) > 1 and self.html['multicol']:
+                                 span = col.shape[1]
+                                 for i in range(span):
+                                     # Split up multicolumns into separate columns
+                                     new_col = Column([el[i] for el in col])
++                                    # Propagate any user-specified format from parent column
++                                    new_col.info.format = getattr(col.info, 'format', None)
+ 
+                                     new_col_iter_str_vals = self.fill_values(
+                                         col, new_col.info.iter_str_vals())
+                                     col_str_iters.append(new_col_iter_str_vals)
+                                     new_cols_escaped.append(col_escaped)
+                                     new_cols.append(new_col)
+                             else:
+ 
+                                 col_iter_str_vals = self.fill_values(col, col.info.iter_str_vals())
+                                 col_str_iters.append(col_iter_str_vals)
+ 
+                                 new_cols_escaped.append(col_escaped)
+ 
+                     for row in zip(*col_str_iters):
+                         with w.tag('tr'):
+                             for el, col_escaped in zip(row, new_cols_escaped):
+                                 # Potentially disable HTML escaping for column
+                                 method = ('escape_xml' if col_escaped else 'bleach_clean')
+                                 with w.xml_cleaning_method(method, **raw_html_clean_kwargs):
+                                     w.start('td')
+                                     w.data(el.strip())
+                                     w.end(indent=False)
+ 
+         # Fixes XMLWriter's insertion of unwanted line breaks
+-        return [''.join(lines)]
++        out = [''.join(lines)]
++
++        # Restore original column formats to avoid side effects
++        for col in cols:
++            col.info.format = orig_formats.get(col.info.name, None)
++
++        return out
+ 
+     def fill_values(self, col, col_str_iters):
+         """
+         Return an iterator of the values with replacements based on fill_values
+         """
+*** End Patch

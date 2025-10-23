@@ -1,0 +1,19 @@
+
+*** Begin Patch
+*** Update File: astropy/modeling/separable.py
+@@ def _cstack(left, right):
+         cleft = np.zeros((noutp, left.shape[1]))
+         cleft[: left.shape[0], : left.shape[1]] = left
+     if isinstance(right, Model):
+         cright = _coord_matrix(right, 'right', noutp)
+     else:
+-        cright = np.zeros((noutp, right.shape[1]))
+-        cright[-right.shape[0]:, -right.shape[1]:] = 1
++        # Preserve the separability structure already computed for the right-hand side.
++        # When the right operand is already a separability matrix (i.e., an ndarray),
++        # we must embed that matrix in the bottom-right block, not overwrite it with ones.
++        cright = np.zeros((noutp, right.shape[1]))
++        cright[-right.shape[0]:, -right.shape[1]:] = right
+ 
+     return np.hstack([cleft, cright])
+*** End Patch

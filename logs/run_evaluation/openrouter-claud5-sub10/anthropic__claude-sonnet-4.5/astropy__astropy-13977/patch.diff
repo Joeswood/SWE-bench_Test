@@ -1,0 +1,42 @@
+
+--- a/astropy/units/quantity.py
++++ b/astropy/units/quantity.py
+@@ -555,8 +555,13 @@
+         # and the unit of the result (or tuple of units for nout > 1).
+         converters, unit = converters_and_unit(function, method, *inputs)
+ 
+-        out = kwargs.get("out", None)
++        out = kwargs.get("out", None)
++    def __array_ufunc__(self, function, method, *inputs, **kwargs):
++        """Wrap numpy ufuncs, taking care of units.
++
++        Parameters
++        ----------
++        function : callable
++            ufunc to wrap.
++        method : str
++            Ufunc method: ``__call__``, ``at``, ``reduce``, etc.
++        inputs : tuple
++            Input arrays.
++        kwargs : keyword arguments
++            As passed on, with ``out`` containing possible quantity output.
++
++        Returns
++        -------
++        result : `~astropy.units.Quantity`
++            Results of the ufunc, with the unit set properly.
++        """
++        # Determine required conversion functions -- to bring the unit of the
++        # input to that expected (e.g., radian for np.sin), or to get
++        # consistent units between two inputs (e.g., in np.add) --
++        # and the unit of the result (or tuple of units for nout > 1).
++        try:
++            converters, unit = converters_and_unit(function, method, *inputs)
++        except (ValueError, TypeError):
++            # If we cannot handle the inputs (e.g., due to incompatible types
++            # that cannot be converted), return NotImplemented to allow other
++            # operands to handle the operation via their reflected methods.
++            return NotImplemented
++
++        out = kwargs.get("out", None)
+         # Avoid loop back by turning any Quantity output into array views.

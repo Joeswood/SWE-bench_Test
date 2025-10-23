@@ -1,0 +1,20 @@
+
+--- a/astropy/coordinates/sky_coordinate.py
++++ b/astropy/coordinates/sky_coordinate.py
+@@ -583,6 +583,16 @@
+         # Prevent infinite recursion here.
+         if attr.startswith("_"):
+             return self.__getattribute__(attr)  # Raise AttributeError.
++        
++        # Check if this is a property/descriptor on the class that raised
++        # an AttributeError. If so, let that exception propagate rather than
++        # masking it with a misleading message. See issue #11343.
++        for cls in type(self).__mro__:
++            if attr in cls.__dict__:
++                descriptor = cls.__dict__[attr]
++                if hasattr(descriptor, '__get__'):
++                    # This is a descriptor, let the original error propagate
++                    return self.__getattribute__(attr)
+ 
+         repr_names = self.representation_component_names
+         if attr in repr_names:

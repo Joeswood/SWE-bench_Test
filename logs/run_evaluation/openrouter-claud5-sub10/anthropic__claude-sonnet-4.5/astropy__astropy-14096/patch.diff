@@ -1,0 +1,19 @@
+
+--- a/astropy/coordinates/sky_coordinate.py
++++ b/astropy/coordinates/sky_coordinate.py
+@@ -590,6 +590,15 @@
+         # Prevent infinite recursion here.
+         if attr.startswith("_"):
+             return self.__getattribute__(attr)  # Raise AttributeError.
++        
++        # Check if this attribute exists as a descriptor (e.g., property) on the class.
++        # If so, let the descriptor handle the attribute access and any errors it raises.
++        # This prevents misleading error messages when a property tries to access
++        # a non-existent attribute.
++        for cls in type(self).__mro__:
++            if attr in cls.__dict__:
++                # Attribute exists on class, let normal attribute access handle it
++                return self.__getattribute__(attr)
+ 
+         repr_names = self.representation_component_names
+         if attr in repr_names:

@@ -1,0 +1,29 @@
+
+--- a/astropy/units/quantity.py
++++ b/astropy/units/quantity.py
+@@ -520,8 +520,19 @@ class Quantity(np.ndarray):
+         arrays = []
+         for input_, converter in zip(inputs, converters):
+             input_ = getattr(input_, "value", input_)
+-            arrays.append(converter(input_) if converter else input_)
++            if converter:
++                try:
++                    # Try to convert the input to what the ufunc expects.
++                    # If this fails with a ValueError (e.g., because the input
++                    # is a foreign/duck type that Quantity cannot interpret),
++                    # give other operands a chance by returning NotImplemented
++                    # so NumPy can try reflected operations on those types.
++                    input_ = converter(input_)
++                except ValueError:
++                    return NotImplemented
++            arrays.append(input_)
+ 
+         # Call our superclass's __array_ufunc__
+         result = super().__array_ufunc__(function, method, *arrays, **kwargs)
+         # If unit is None, a plain array is expected (e.g., comparisons), which
+         # means we're done.
+         # We're also done if the result was None (for method 'at') or
+         # NotImplemented, which can happen if other inputs/outputs override
+         # __array_ufunc__; hopefully, they can then deal with us.
+         if unit is None or result is None or result is NotImplemented:
+             return result

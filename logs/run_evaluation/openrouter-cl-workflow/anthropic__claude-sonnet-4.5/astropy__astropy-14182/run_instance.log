@@ -1,0 +1,96 @@
+2025-10-22 20:00:39,950 - INFO - Creating container for astropy__astropy-14182...
+2025-10-22 20:00:41,105 - INFO - Container for astropy__astropy-14182 created: cc79bb67d06ab7caf1ed42071690f09814691d35c463f5ae171dc4d86cdff677
+2025-10-22 20:00:42,015 - INFO - Container for astropy__astropy-14182 started: cc79bb67d06ab7caf1ed42071690f09814691d35c463f5ae171dc4d86cdff677
+2025-10-22 20:00:42,016 - INFO - Intermediate patch for astropy__astropy-14182 written to logs/run_evaluation/openrouter-cl-workflow/anthropic__claude-sonnet-4.5/astropy__astropy-14182/patch.diff, now applying to container...
+2025-10-22 20:00:42,200 - INFO - Failed to apply patch to container: git apply --verbose
+2025-10-22 20:00:42,285 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2025-10-22 20:00:42,522 - INFO - >>>>> Applied Patch:
+patching file astropy/io/ascii/rst.py
+Hunk #1 succeeded at 21 with fuzz 3.
+Hunk #2 succeeded at 48 with fuzz 3.
+patch unexpectedly ends in middle of line
+Hunk #3 succeeded at 63 with fuzz 3.
+
+2025-10-22 20:00:43,285 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/rst.py b/astropy/io/ascii/rst.py
+index abdeba8ef..ceed08215 100644
+--- a/astropy/io/ascii/rst.py
++++ b/astropy/io/ascii/rst.py
+@@ -21,6 +21,10 @@ class SimpleRSTHeader(FixedWidthHeader):
+ 
+     def get_fixedwidth_params(self, line):
+         vals, starts, ends = super().get_fixedwidth_params(line)
++    _description = "reStructuredText simple format table"
++
++    def __init__(self, header_rows=None):
++        super().__init__(header_rows=header_rows)
+         # The right hand column can be unbounded
+         ends[-1] = None
+         return vals, starts, ends
+@@ -44,6 +48,9 @@ class RST(FixedWidth):
+         ==== ===== ======
+           1    2.3  Hello
+           2    4.5  Worlds
++    def __init__(self):
++        super().__init__()
++
+         ==== ===== ======
+ 
+     Currently there is no support for reading tables which utilize continuation lines,
+@@ -56,6 +63,9 @@ class RST(FixedWidth):
+     _description = "reStructuredText simple table"
+     data_class = SimpleRSTData
+     header_class = SimpleRSTHeader
++    def __init__(self):
++        super().__init__()
++
+ 
+     def __init__(self):
+         super().__init__(delimiter_pad=None, bookend=False)
+2025-10-22 20:00:43,285 - INFO - Eval script for astropy__astropy-14182 written to logs/run_evaluation/openrouter-cl-workflow/anthropic__claude-sonnet-4.5/astropy__astropy-14182/eval.sh; copying to container...
+2025-10-22 20:02:46,039 - INFO - Test runtime: 122.68 seconds
+2025-10-22 20:02:46,041 - INFO - Test output for astropy__astropy-14182 written to logs/run_evaluation/openrouter-cl-workflow/anthropic__claude-sonnet-4.5/astropy__astropy-14182/test_output.txt
+2025-10-22 20:02:46,110 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/rst.py b/astropy/io/ascii/rst.py
+index abdeba8ef..ceed08215 100644
+--- a/astropy/io/ascii/rst.py
++++ b/astropy/io/ascii/rst.py
+@@ -21,6 +21,10 @@ class SimpleRSTHeader(FixedWidthHeader):
+ 
+     def get_fixedwidth_params(self, line):
+         vals, starts, ends = super().get_fixedwidth_params(line)
++    _description = "reStructuredText simple format table"
++
++    def __init__(self, header_rows=None):
++        super().__init__(header_rows=header_rows)
+         # The right hand column can be unbounded
+         ends[-1] = None
+         return vals, starts, ends
+@@ -44,6 +48,9 @@ class RST(FixedWidth):
+         ==== ===== ======
+           1    2.3  Hello
+           2    4.5  Worlds
++    def __init__(self):
++        super().__init__()
++
+         ==== ===== ======
+ 
+     Currently there is no support for reading tables which utilize continuation lines,
+@@ -56,6 +63,9 @@ class RST(FixedWidth):
+     _description = "reStructuredText simple table"
+     data_class = SimpleRSTData
+     header_class = SimpleRSTHeader
++    def __init__(self):
++        super().__init__()
++
+ 
+     def __init__(self):
+         super().__init__(delimiter_pad=None, bookend=False)
+2025-10-22 20:02:46,111 - INFO - Grading answer for astropy__astropy-14182...
+2025-10-22 20:02:46,116 - INFO - report: {'astropy__astropy-14182': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_rst.py::test_rst_with_header_rows']}, 'PASS_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_rst.py::test_read_normal', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_names', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_names_include', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_exclude', 'astropy/io/ascii/tests/test_rst.py::test_read_unbounded_right_column', 'astropy/io/ascii/tests/test_rst.py::test_read_unbounded_right_column_header', 'astropy/io/ascii/tests/test_rst.py::test_read_right_indented_table', 'astropy/io/ascii/tests/test_rst.py::test_trailing_spaces_in_row_definition', 'astropy/io/ascii/tests/test_rst.py::test_write_normal']}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-14182: resolved: False
+2025-10-22 20:02:46,116 - INFO - Attempting to stop container sweb.eval.astropy__astropy-14182.openrouter-cl-workflow...
+2025-10-22 20:03:01,734 - INFO - Attempting to remove container sweb.eval.astropy__astropy-14182.openrouter-cl-workflow...
+2025-10-22 20:03:01,853 - INFO - Container sweb.eval.astropy__astropy-14182.openrouter-cl-workflow removed.
+2025-10-22 20:03:01,853 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.astropy_1776_astropy-14182:latest...
+2025-10-22 20:03:02,065 - INFO - Image swebench/sweb.eval.x86_64.astropy_1776_astropy-14182:latest removed.

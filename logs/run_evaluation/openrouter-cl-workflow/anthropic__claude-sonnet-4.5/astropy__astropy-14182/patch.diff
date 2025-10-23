@@ -1,0 +1,48 @@
+Looking at the issue, I need to add support for the `header_rows` parameter to the RST (RestructuredText) writer class in astropy's ASCII I/O module.
+
+The error shows that `RST.__init__()` doesn't accept the `header_rows` keyword argument, while other formats like `fixed_width` do support it.
+
+Let me trace through the code:
+
+1. The `RST` class is likely in `astropy/io/ascii/rst.py`
+2. Looking at the code structure, I need to find where RST is defined and add `header_rows` support
+3. The `FixedWidth` class supports `header_rows`, so I should follow a similar pattern
+
+From the provided code, I can see in `astropy/io/ascii/core.py` that there's a `_get_writer` function that handles writer initialization. The RST writer needs to accept and handle the `header_rows` parameter.
+
+Let me create a patch that adds this functionality:
+
+diff --git a/astropy/io/ascii/rst.py b/astropy/io/ascii/rst.py
+--- a/astropy/io/ascii/rst.py
++++ b/astropy/io/ascii/rst.py
+@@ -21,6 +21,10 @@ class RST(FixedWidth):
+     """
+ 
+     _format_name = "rst"
++    _description = "reStructuredText simple format table"
++
++    def __init__(self, header_rows=None):
++        super().__init__(header_rows=header_rows)
+ 
+     data_class = SimpleRSTData
+     header_class = SimpleRSTHeader
+@@ -44,6 +48,9 @@ class SimpleRSTHeader(FixedWidthHeader):
+     position_char = "="
+     splitter_class = FixedWidthSplitter
+ 
++    def __init__(self):
++        super().__init__()
++
+     def get_fixedwidth_params(self, line):
+         vals, starts, ends = super().get_fixedwidth_params(line)
+         # The right hand column can be unbounded
+@@ -56,6 +63,9 @@ class SimpleRSTHeader(FixedWidthHeader):
+ 
+ 
+ class SimpleRSTData(FixedWidthData):
++    def __init__(self):
++        super().__init__()
++
+     splitter_class = FixedWidthSplitter
+     end_line = None
+ 

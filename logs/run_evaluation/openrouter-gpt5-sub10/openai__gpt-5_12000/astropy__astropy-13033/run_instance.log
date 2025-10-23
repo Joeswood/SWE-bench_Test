@@ -1,0 +1,26 @@
+2025-10-13 21:21:56,895 - INFO - Creating container for astropy__astropy-13033...
+2025-10-13 21:21:59,059 - INFO - Container for astropy__astropy-13033 created: 21ebebad53c73f7b117655e38f6ee4bd0907a8519a183d07cb793c85102709cd
+2025-10-13 21:21:59,876 - INFO - Container for astropy__astropy-13033 started: 21ebebad53c73f7b117655e38f6ee4bd0907a8519a183d07cb793c85102709cd
+2025-10-13 21:21:59,877 - INFO - Intermediate patch for astropy__astropy-13033 written to logs/run_evaluation/openrouter-gpt5-sub10/openai__gpt-5/astropy__astropy-13033/patch.diff, now applying to container...
+2025-10-13 21:22:00,166 - INFO - >>>>> Applied Patch:
+Checking patch astropy/coordinates/sky_coordinate.py...
+Hunk #1 succeeded at 146 (offset 13 lines).
+Applied patch astropy/coordinates/sky_coordinate.py cleanly.
+
+2025-10-13 21:22:00,913 - INFO - Git diff before:
+diff --git a/astropy/coordinates/sky_coordinate.py b/astropy/coordinates/sky_coordinate.py
+index d3876b35d..a9ca9be1f 100644
+--- a/astropy/coordinates/sky_coordinate.py
++++ b/astropy/coordinates/sky_coordinate.py
+@@ -148,7 +148,9 @@ class SkyCoordInfo(MixinInfo):
+             try:
+                 out[0] = skycoord[0]
+             except Exception as err:
+-                raise ValueError(f'Input skycoords are inconsistent.') from err
++                # Provide a more informative error message to aid debugging by
++                # including the original exception details.
++                raise ValueError(f'Input skycoords are inconsistent: {err}') from err
+ 
+         # Set (merged) info attributes
+         for attr in ('name', 'meta', 'description'):
+2025-10-13 21:22:00,914 - INFO - Eval script for astropy__astropy-13033 written to logs/run_evaluation/openrouter-gpt5-sub10/openai__gpt-5/astropy__astropy-13033/eval.sh; copying to container...

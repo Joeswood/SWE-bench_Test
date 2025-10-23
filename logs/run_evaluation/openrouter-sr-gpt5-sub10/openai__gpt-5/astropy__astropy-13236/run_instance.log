@@ -1,0 +1,3161 @@
+2025-10-13 22:31:19,643 - INFO - Creating container for astropy__astropy-13236...
+2025-10-13 22:31:20,462 - INFO - Container for astropy__astropy-13236 created: 3f277c19c2d90321c5ad90373017c7842d6ec7d47dca848cb20a62e7c633896f
+2025-10-13 22:31:20,969 - INFO - Container for astropy__astropy-13236 started: 3f277c19c2d90321c5ad90373017c7842d6ec7d47dca848cb20a62e7c633896f
+2025-10-13 22:31:20,970 - INFO - Intermediate patch for astropy__astropy-13236 written to logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/patch.diff, now applying to container...
+2025-10-13 22:31:21,142 - INFO - Failed to apply patch to container: git apply --verbose
+2025-10-13 22:31:21,210 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2025-10-13 22:31:21,287 - INFO - Failed to apply patch to container: patch --batch --fuzz=5 -p1 -i
+2025-10-13 22:31:21,287 - INFO - >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+2025-10-13 22:31:21,320 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: <exception str() failed>
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,321 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,322 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,323 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,324 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,324 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,324 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,324 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,324 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,324 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,325 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,326 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,327 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,328 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,329 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,330 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,331 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,332 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,333 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,334 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,335 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,336 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,337 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,338 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,339 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,340 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,341 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,342 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,377 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: <exception str() failed>
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,378 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,379 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,380 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,381 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,382 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,383 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,384 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,385 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,386 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,387 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,388 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,389 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,390 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,391 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,392 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,393 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,394 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,395 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,396 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,397 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Traceback (most recent call last):
+  File "/users/Yuang/SWE-bench_Test/swebench/harness/run_evaluation.py", line 182, in run_instance
+    raise EvaluationError(
+swebench.harness.utils.EvaluationError: astropy__astropy-13236: >>>>> Patch Apply Failed:
+patch: **** Only garbage was found in the patch input.
+
+Check (logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-13236/run_instance.log) for more information.
+
+2025-10-13 22:31:21,398 - INFO - Attempting to stop container sweb.eval.astropy__astropy-13236.openrouter-sr-gpt5-sub10...
+2025-10-13 22:31:37,071 - INFO - Attempting to remove container sweb.eval.astropy__astropy-13236.openrouter-sr-gpt5-sub10...
+2025-10-13 22:31:37,169 - INFO - Container sweb.eval.astropy__astropy-13236.openrouter-sr-gpt5-sub10 removed.
+2025-10-13 22:31:37,169 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.astropy_1776_astropy-13236:latest...
+2025-10-13 22:31:37,339 - INFO - Image swebench/sweb.eval.x86_64.astropy_1776_astropy-13236:latest removed.

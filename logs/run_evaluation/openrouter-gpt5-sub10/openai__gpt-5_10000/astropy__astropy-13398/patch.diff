@@ -1,0 +1,99 @@
+*** Begin Patch
+*** Update File: astropy/coordinates/builtin_frames/__init__.py
+@@
+ from . import cirs_observed_transforms
+ from . import icrs_observed_transforms
+ from . import intermediate_rotation_transforms
++from . import itrs_observed_transforms
+ from . import ecliptic_transforms
+ 
+ # Import this after importing other frames, since this requires various
+ # transformtions to set up the LSR frames
+ from .lsr import LSR, GalacticLSR, LSRK, LSRD
+*** End Patch
+ 
+*** Begin Patch
+*** Add File: astropy/coordinates/builtin_frames/itrs_observed_transforms.py
++# Licensed under a 3-clause BSD style license - see LICENSE.rst
++"""
++Direct transformations between ITRS and observed frames (AltAz, HADec)
++that stay within the ITRS, avoiding intermediate frames that can
++introduce topocentric/geocentric aberration inconsistencies for nearby
++objects (e.g., satellites).
++"""
++
++import numpy as np
++
++from astropy import units as u
++from astropy.coordinates.baseframe import frame_transform_graph
++from astropy.coordinates.transformations import FunctionTransformWithFiniteDifference
++from astropy.coordinates.matrix_utilities import rotation_matrix, matrix_transpose
++
++from .altaz import AltAz
++from .hadec import HADec
++from .itrs import ITRS
++from .utils import PIOVER2
++
++
++def _itrs_to_observed_mat(observed_frame):
++    """
++    Build the rotation matrix that maps topocentric ITRS vectors into the
++    observed frame axes (AltAz or HADec).
++    """
++    # Use geodetic longitude/latitude for the rotation.
++    lon, lat, _ = observed_frame.location.to_geodetic('WGS84')
++    elong = lon.to_value(u.radian)
++
++    if isinstance(observed_frame, AltAz):
++        # ITRS -> AltAz (left-handed: flip X)
++        elat = lat.to_value(u.radian)
++        minus_x = np.eye(3)
++        minus_x[0, 0] = -1.0
++        mat = (minus_x
++               @ rotation_matrix(PIOVER2 - elat, 'y', unit=u.radian)
++               @ rotation_matrix(elong, 'z', unit=u.radian))
++    else:
++        # ITRS -> HADec (left-handed: flip Y)
++        minus_y = np.eye(3)
++        minus_y[1, 1] = -1.0
++        mat = (minus_y
++               @ rotation_matrix(elong, 'z', unit=u.radian))
++    return mat
++
++
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, ITRS, AltAz)
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, ITRS, HADec)
++def itrs_to_observed(itrs_coo, observed_frame):
++    """
++    Transform an ITRS position directly to an observed frame (AltAz or HADec),
++    remaining within the ITRS. The ITRS input is treated as time-invariant to
++    avoid referencing to the SSB when obstimes differ.
++    """
++    # Form the topocentric ITRS position vector by subtracting the site vector.
++    # Do not pass obstime to keep the ITRS position time-invariant here.
++    site_itrs = observed_frame.location.get_itrs()
++    topocentric_itrs_repr = itrs_coo.cartesian - site_itrs.cartesian
++
++    # Rotate into the observed frame axes.
++    rep = topocentric_itrs_repr.transform(_itrs_to_observed_mat(observed_frame))
++    return observed_frame.realize_frame(rep)
++
++
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, AltAz, ITRS)
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, HADec, ITRS)
++def observed_to_itrs(observed_coo, itrs_frame):
++    """
++    Transform from an observed frame (AltAz or HADec) directly to ITRS,
++    remaining within the ITRS. The output ITRS adopts the obstime from the
++    requested itrs_frame without attempting to propagate the input time.
++    """
++    # Transform observed (topocentric) vector back to topocentric ITRS.
++    topocentric_itrs_repr = observed_coo.cartesian.transform(
++        matrix_transpose(_itrs_to_observed_mat(observed_coo))
++    )
++    # Add the geocentric site vector to get the geocentric ITRS position.
++    site_itrs = observed_coo.location.get_itrs()
++    rep = topocentric_itrs_repr + site_itrs.cartesian
++    return itrs_frame.realize_frame(rep)
++
+*** End Patch

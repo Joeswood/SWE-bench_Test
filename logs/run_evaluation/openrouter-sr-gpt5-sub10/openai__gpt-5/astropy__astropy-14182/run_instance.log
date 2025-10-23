@@ -1,0 +1,132 @@
+2025-10-13 22:34:43,681 - INFO - Creating container for astropy__astropy-14182...
+2025-10-13 22:34:44,401 - INFO - Container for astropy__astropy-14182 created: 58bbacbd7fd54f6e55bfe6e563287c622d1ec06e4f6ed8dd5149c7aa9237933e
+2025-10-13 22:34:44,900 - INFO - Container for astropy__astropy-14182 started: 58bbacbd7fd54f6e55bfe6e563287c622d1ec06e4f6ed8dd5149c7aa9237933e
+2025-10-13 22:34:44,901 - INFO - Intermediate patch for astropy__astropy-14182 written to logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-14182/patch.diff, now applying to container...
+2025-10-13 22:34:45,076 - INFO - Failed to apply patch to container: git apply --verbose
+2025-10-13 22:34:45,143 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2025-10-13 22:34:45,347 - INFO - >>>>> Applied Patch:
+patching file astropy/io/ascii/core.py
+Hunk #1 succeeded at 1812 (offset 559 lines).
+Hunk #2 succeeded at 1877 with fuzz 2 (offset 559 lines).
+
+2025-10-13 22:34:46,084 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/core.py b/astropy/io/ascii/core.py
+index 381b5b13d..b996240fc 100644
+--- a/astropy/io/ascii/core.py
++++ b/astropy/io/ascii/core.py
+@@ -1812,7 +1812,33 @@ def _get_writer(Writer, fast_writer, **kwargs):
+         return FAST_CLASSES[f"fast_{Writer._format_name}"](**kwargs)
+ 
+     writer_kwargs = {k: v for k, v in kwargs.items() if k not in extra_writer_pars}
+-    writer = Writer(**writer_kwargs)
++
++    # Some writers (e.g. fixed_width) accept 'header_rows' in __init__, while
++    # others (e.g. rst) do not. In order to support a uniform API without
++    # breaking writers that don't accept this kwarg, try constructing the writer
++    # with all writer_kwargs and fall back to removing 'header_rows' if the
++    # constructor complains about an unexpected keyword. In that case, set the
++    # header_rows attribute on the writer/header after construction so formats
++    # that support it via attributes can still use it.
++    _header_rows = None
++    try:
++        writer = Writer(**writer_kwargs)
++    except TypeError as err:
++        # Only special-case unexpected keyword argument 'header_rows'
++        if "header_rows" in writer_kwargs and "unexpected keyword argument 'header_rows'" in str(err):
++            _header_rows = writer_kwargs.pop("header_rows")
++            writer = Writer(**writer_kwargs)
++            # Try attaching header_rows information so that writers that inspect
++            # attributes (either on the writer itself or its header) can make
++            # use of it even if they don't accept it in __init__.
++            with suppress(Exception):
++                setattr(writer, "header_rows", _header_rows)
++            with suppress(Exception):
++                # Some writers keep header-related settings on writer.header
++                if hasattr(writer, "header"):
++                    setattr(writer.header, "header_rows", _header_rows)
++        else:
++            raise
+ 
+     if "delimiter" in kwargs:
+         writer.header.splitter.delimiter = kwargs["delimiter"]
+@@ -1851,4 +1877,14 @@ def _get_writer(Writer, fast_writer, **kwargs):
+         writer.data.fill_include_names = kwargs["fill_include_names"]
+     if "fill_exclude_names" in kwargs:
+         writer.data.fill_exclude_names = kwargs["fill_exclude_names"]
++
++    # If we deferred setting header_rows because the Writer __init__ did not
++    # accept it, ensure we still propagate it here as well (in case the writer
++    # object was later replaced or modified by options above).
++    if _header_rows is not None:
++        with suppress(Exception):
++            setattr(writer, "header_rows", _header_rows)
++        with suppress(Exception):
++            if hasattr(writer, "header"):
++                setattr(writer.header, "header_rows", _header_rows)
+     return writer
+2025-10-13 22:34:46,085 - INFO - Eval script for astropy__astropy-14182 written to logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-14182/eval.sh; copying to container...
+2025-10-13 22:36:52,260 - INFO - Test runtime: 126.11 seconds
+2025-10-13 22:36:52,261 - INFO - Test output for astropy__astropy-14182 written to logs/run_evaluation/openrouter-sr-gpt5-sub10/openai__gpt-5/astropy__astropy-14182/test_output.txt
+2025-10-13 22:36:52,339 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/core.py b/astropy/io/ascii/core.py
+index 381b5b13d..b996240fc 100644
+--- a/astropy/io/ascii/core.py
++++ b/astropy/io/ascii/core.py
+@@ -1812,7 +1812,33 @@ def _get_writer(Writer, fast_writer, **kwargs):
+         return FAST_CLASSES[f"fast_{Writer._format_name}"](**kwargs)
+ 
+     writer_kwargs = {k: v for k, v in kwargs.items() if k not in extra_writer_pars}
+-    writer = Writer(**writer_kwargs)
++
++    # Some writers (e.g. fixed_width) accept 'header_rows' in __init__, while
++    # others (e.g. rst) do not. In order to support a uniform API without
++    # breaking writers that don't accept this kwarg, try constructing the writer
++    # with all writer_kwargs and fall back to removing 'header_rows' if the
++    # constructor complains about an unexpected keyword. In that case, set the
++    # header_rows attribute on the writer/header after construction so formats
++    # that support it via attributes can still use it.
++    _header_rows = None
++    try:
++        writer = Writer(**writer_kwargs)
++    except TypeError as err:
++        # Only special-case unexpected keyword argument 'header_rows'
++        if "header_rows" in writer_kwargs and "unexpected keyword argument 'header_rows'" in str(err):
++            _header_rows = writer_kwargs.pop("header_rows")
++            writer = Writer(**writer_kwargs)
++            # Try attaching header_rows information so that writers that inspect
++            # attributes (either on the writer itself or its header) can make
++            # use of it even if they don't accept it in __init__.
++            with suppress(Exception):
++                setattr(writer, "header_rows", _header_rows)
++            with suppress(Exception):
++                # Some writers keep header-related settings on writer.header
++                if hasattr(writer, "header"):
++                    setattr(writer.header, "header_rows", _header_rows)
++        else:
++            raise
+ 
+     if "delimiter" in kwargs:
+         writer.header.splitter.delimiter = kwargs["delimiter"]
+@@ -1851,4 +1877,14 @@ def _get_writer(Writer, fast_writer, **kwargs):
+         writer.data.fill_include_names = kwargs["fill_include_names"]
+     if "fill_exclude_names" in kwargs:
+         writer.data.fill_exclude_names = kwargs["fill_exclude_names"]
++
++    # If we deferred setting header_rows because the Writer __init__ did not
++    # accept it, ensure we still propagate it here as well (in case the writer
++    # object was later replaced or modified by options above).
++    if _header_rows is not None:
++        with suppress(Exception):
++            setattr(writer, "header_rows", _header_rows)
++        with suppress(Exception):
++            if hasattr(writer, "header"):
++                setattr(writer.header, "header_rows", _header_rows)
+     return writer
+2025-10-13 22:36:52,339 - INFO - Grading answer for astropy__astropy-14182...
+2025-10-13 22:36:52,346 - INFO - report: {'astropy__astropy-14182': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_rst.py::test_rst_with_header_rows']}, 'PASS_TO_PASS': {'success': ['astropy/io/ascii/tests/test_rst.py::test_read_normal', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_names', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_names_include', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_exclude', 'astropy/io/ascii/tests/test_rst.py::test_read_unbounded_right_column', 'astropy/io/ascii/tests/test_rst.py::test_read_unbounded_right_column_header', 'astropy/io/ascii/tests/test_rst.py::test_read_right_indented_table', 'astropy/io/ascii/tests/test_rst.py::test_trailing_spaces_in_row_definition', 'astropy/io/ascii/tests/test_rst.py::test_write_normal'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-14182: resolved: False
+2025-10-13 22:36:52,347 - INFO - Attempting to stop container sweb.eval.astropy__astropy-14182.openrouter-sr-gpt5-sub10...
+2025-10-13 22:37:07,965 - INFO - Attempting to remove container sweb.eval.astropy__astropy-14182.openrouter-sr-gpt5-sub10...
+2025-10-13 22:37:08,082 - INFO - Container sweb.eval.astropy__astropy-14182.openrouter-sr-gpt5-sub10 removed.
+2025-10-13 22:37:08,083 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.astropy_1776_astropy-14182:latest...
+2025-10-13 22:37:08,286 - INFO - Image swebench/sweb.eval.x86_64.astropy_1776_astropy-14182:latest removed.

@@ -1,0 +1,53 @@
+
+--- a/astropy/io/ascii/core.py
++++ b/astropy/io/ascii/core.py
+@@ -1253,7 +1253,33 @@
+         return FAST_CLASSES[f"fast_{Writer._format_name}"](**kwargs)
+ 
+     writer_kwargs = {k: v for k, v in kwargs.items() if k not in extra_writer_pars}
+-    writer = Writer(**writer_kwargs)
++
++    # Some writers (e.g. fixed_width) accept 'header_rows' in __init__, while
++    # others (e.g. rst) do not. In order to support a uniform API without
++    # breaking writers that don't accept this kwarg, try constructing the writer
++    # with all writer_kwargs and fall back to removing 'header_rows' if the
++    # constructor complains about an unexpected keyword. In that case, set the
++    # header_rows attribute on the writer/header after construction so formats
++    # that support it via attributes can still use it.
++    _header_rows = None
++    try:
++        writer = Writer(**writer_kwargs)
++    except TypeError as err:
++        # Only special-case unexpected keyword argument 'header_rows'
++        if "header_rows" in writer_kwargs and "unexpected keyword argument 'header_rows'" in str(err):
++            _header_rows = writer_kwargs.pop("header_rows")
++            writer = Writer(**writer_kwargs)
++            # Try attaching header_rows information so that writers that inspect
++            # attributes (either on the writer itself or its header) can make
++            # use of it even if they don't accept it in __init__.
++            with suppress(Exception):
++                setattr(writer, "header_rows", _header_rows)
++            with suppress(Exception):
++                # Some writers keep header-related settings on writer.header
++                if hasattr(writer, "header"):
++                    setattr(writer.header, "header_rows", _header_rows)
++        else:
++            raise
+ 
+     if "delimiter" in kwargs:
+         writer.header.splitter.delimiter = kwargs["delimiter"]
+@@ -1292,6 +1318,16 @@
+         writer.data.fill_include_names = kwargs["fill_include_names"]
+     if "fill_exclude_names" in kwargs:
+         writer.data.fill_exclude_names = kwargs["fill_exclude_names"]
++
++    # If we deferred setting header_rows because the Writer __init__ did not
++    # accept it, ensure we still propagate it here as well (in case the writer
++    # object was later replaced or modified by options above).
++    if _header_rows is not None:
++        with suppress(Exception):
++            setattr(writer, "header_rows", _header_rows)
++        with suppress(Exception):
++            if hasattr(writer, "header"):
++                setattr(writer.header, "header_rows", _header_rows)
+     return writer

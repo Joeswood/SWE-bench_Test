@@ -1,0 +1,24 @@
+
+*** Begin Patch
+*** Update File: astropy/table/table.py
+@@
+         # Structured ndarray gets viewed as a mixin unless already a valid
+         # mixin class
+         if (not isinstance(data, Column) and not data_is_mixin
+                 and isinstance(data, np.ndarray) and len(data.dtype) > 1):
++            warnings.warn(
++                "A structured numpy array passed as a column is currently "
++                "auto-converted to an NdarrayMixin when added to a Table. "
++                "This behavior is deprecated and will change in a future "
++                "release (planned for 5.2), where structured arrays will be "
++                "added as a plain Column with a structured dtype. To ensure "
++                "consistent behavior and silence this warning, wrap the array "
++                "explicitly with Column(data, ...).",
++                FutureWarning
++            )
+             data = data.view(NdarrayMixin)
+             data_is_mixin = True
+ 
+         # Get the final column name using precedence.  Some objects may not
+         # have an info attribute. Also avoid creating info as a side effect.
+*** End Patch

@@ -1,0 +1,115 @@
+*** Begin Patch
+*** Update File: astropy/coordinates/builtin_frames/__init__.py
+@@
+ from . import cirs_observed_transforms
+ from . import icrs_observed_transforms
+ from . import intermediate_rotation_transforms
++from . import itrs_observed_transforms
+ from . import ecliptic_transforms
+ 
+ # Import this after importing other frames, since this requires various
+ # transformtions to set up the LSR frames
+ from .lsr import LSR, GalacticLSR, LSRK, LSRD
+*** End Patch
+ 
+*** Begin Patch
+*** Add File: astropy/coordinates/builtin_frames/itrs_observed_transforms.py
++# Licensed under a 3-clause BSD style license - see LICENSE.rst
++"""
++Contains direct transformation functions between ITRS and observed systems
++(AltAz and HADec) that operate purely within ITRS/topocentric vectors.
++
++These are intended primarily for nearby objects (e.g., satellites, aircraft),
++avoiding geocentric vs. topocentric aberration issues by not routing via
++celestial frames. The ITRS positions are treated as time-invariant and tied
++to the rotating Earth. The obstime of the output frame is adopted without
++attempting an ITRS->ITRS time transform.
++"""
++
++import numpy as np
++
++from astropy import units as u
++from astropy.coordinates.baseframe import frame_transform_graph
++from astropy.coordinates.transformations import FunctionTransformWithFiniteDifference
++from astropy.coordinates.matrix_utilities import rotation_matrix, matrix_transpose
++
++from .altaz import AltAz
++from .hadec import HADec
++from .itrs import ITRS
++from .utils import PIOVER2
++
++
++def _itrs_to_observed_mat(observed_frame):
++    """
++    Construct the 3x3 rotation matrix that maps ITRS cartesian vectors to the
++    observed frame (AltAz or HADec) at the observer's geodetic longitude/latitude.
++
++    Notes
++    -----
++    - AltAz and HADec are left-handed frames in astropy, so we include a sign
++      flip on the appropriate axis.
++    """
++    lon, lat, _ = observed_frame.location.to_geodetic('WGS84')
++    elong = lon.to_value(u.radian)
++
++    if isinstance(observed_frame, AltAz):
++        # ITRS -> AltAz rotation
++        elat = lat.to_value(u.radian)
++        minus_x = np.eye(3)
++        minus_x[0, 0] = -1.0
++        mat = (minus_x
++               @ rotation_matrix(PIOVER2 - elat, 'y', unit=u.radian)
++               @ rotation_matrix(elong, 'z', unit=u.radian))
++    else:
++        # ITRS -> HADec rotation
++        minus_y = np.eye(3)
++        minus_y[1, 1] = -1.0
++        mat = (minus_y
++               @ rotation_matrix(elong, 'z', unit=u.radian))
++    return mat
++
++
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, ITRS, AltAz)
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, ITRS, HADec)
++def itrs_to_observed(itrs_coo, observed_frame):
++    """
++    Transform ITRS coordinates to observed coordinates (AltAz or HADec)
++    using a purely topocentric ITRS approach.
++
++    The ITRS position is treated as time-invariant; we do not attempt to
++    perform an ITRS->ITRS transform for differing obstimes. Instead, we
++    simply adopt the obstime of the output observed frame.
++    """
++    # Form the topocentric ITRS position by subtracting the observer location.
++    # Use the observed frame obstime for the location ITRS, but do not alter
++    # the input ITRS position itself.
++    loc_itrs = observed_frame.location.get_itrs(obstime=observed_frame.obstime)
++    topo_itrs = itrs_coo.cartesian - loc_itrs.cartesian
++
++    # Rotate into the observed frame axes.
++    mat = _itrs_to_observed_mat(observed_frame)
++    rep = topo_itrs.transform(mat)
++    return observed_frame.realize_frame(rep)
++
++
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, AltAz, ITRS)
++@frame_transform_graph.transform(FunctionTransformWithFiniteDifference, HADec, ITRS)
++def observed_to_itrs(observed_coo, itrs_frame):
++    """
++    Transform observed coordinates (AltAz or HADec) to ITRS coordinates
++    using a purely topocentric ITRS approach.
++
++    We compute the topocentric ITRS vector from the observed frame, then add
++    the geocentric ITRS location of the observer to get the geocentric ITRS
++    position of the target. The obstime of the output ITRS frame is adopted.
++    """
++    # Convert observed (AltAz/HADec) vector back to topocentric ITRS.
++    mat = _itrs_to_observed_mat(observed_coo)
++    topo_itrs = observed_coo.cartesian.transform(matrix_transpose(mat))
++
++    # Add the observer geocentric ITRS position at the observed time.
++    loc_itrs = observed_coo.location.get_itrs(obstime=observed_coo.obstime).cartesian
++    rep = topo_itrs + loc_itrs
++    return itrs_frame.realize_frame(rep)
++
+*** End Patch

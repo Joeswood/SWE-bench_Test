@@ -1,0 +1,44 @@
+
+--- a/astropy/wcs/wcsapi/fitswcs.py
++++ b/astropy/wcs/wcsapi/fitswcs.py
+@@ -380,6 +380,11 @@ class SlicedFITSWCS(BaseHighLevelWCS):
+         # world coordinates with the values of the slices.
+         world_full = list(world) if self._world_keep.sum() > 1 else [world]
+         
++        # Keep track of which world axes we're keeping
++        iworld_curr = 0
++        world_arrays = []
++        world_full_list = []
++        
+         iworld = -1
+         for ipixel in range(self._wcs.pixel_n_dim):
+             iworld += 1
+@@ -388,17 +393,25 @@ class SlicedFITSWCS(BaseHighLevelWCS):
+                 continue
+             
+             if self._world_keep[iworld]:
+-                world_full.insert(iworld, world_full.pop(0))
++                world_full_list.insert(iworld, world_full[iworld_curr])
++                iworld_curr += 1
+             else:
+                 # Find the world coordinate value for this sliced axis
+                 pixel_full = np.zeros(self._wcs.pixel_n_dim)
+                 pixel_full[ipixel] = self._slices_pixel[ipixel]
+                 world_value = self._wcs.pixel_to_world_values(*pixel_full)[iworld]
+-                world_full.insert(iworld, world_value)
++                world_full_list.insert(iworld, world_value)
++        
++        # Ensure we have all world coordinates
++        while len(world_full_list) < self._wcs.world_n_dim:
++            if iworld_curr < len(world_full):
++                world_full_list.append(world_full[iworld_curr])
++                iworld_curr += 1
++            else:
++                break
+         
+         # Now we can convert to pixel coordinates
+-        pixel_full = self._wcs.world_to_pixel_values(*world_full)
++        pixel_full = self._wcs.world_to_pixel_values(*world_full_list)
+         
+         # And extract just the pixel coordinates we need
+         pixel = []

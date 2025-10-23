@@ -1,0 +1,24 @@
+Looking at the issue, I need to:
+
+1. Add a FutureWarning when a structured ndarray is auto-converted to NdarrayMixin
+2. The warning should tell users to wrap data in Column explicitly
+3. The code location is in `astropy/table/table.py` in the `_convert_data_to_col` method
+
+Let me create the patch:
+
+diff --git a/astropy/table/table.py b/astropy/table/table.py
+--- a/astropy/table/table.py
++++ b/astropy/table/table.py
+@@ -1397,6 +1397,13 @@
+         # Structured ndarray gets viewed as a mixin unless already a valid
+         # mixin class
+         if (not isinstance(data, Column) and not data_is_mixin
+                 and isinstance(data, np.ndarray) and len(data.dtype) > 1):
++            warnings.warn("Structured numpy arrays will be converted to Column instead of "
++                          "NdarrayMixin in astropy 5.2. To avoid this warning, explicitly "
++                          "convert the array to a Column using Column(data) or to an "
++                          "NdarrayMixin using NdarrayMixin(data).",
++                          FutureWarning,
++                          stacklevel=4)
+             data = data.view(NdarrayMixin)
+             data_is_mixin = True

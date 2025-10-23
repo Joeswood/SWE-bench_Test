@@ -1,0 +1,22 @@
+
+*** Begin Patch
+*** Update File: astropy/wcs/wcs.py
+@@
+     def has_distortion(self):
+         """
+         Returns `True` if any distortion terms are present.
+         """
+         return (self.sip is not None or
+-                self.cpdis1 is not None or self.cpdis2 is not None or
+-                self.det2im1 is not None and self.det2im2 is not None)
++                self.cpdis1 is not None or self.cpdis2 is not None or
++                # Detector-to-image distortions can be present on a single axis.
++                # The previous implementation required both det2im1 and det2im2
++                # to be present which could cause code paths (e.g. inverse solvers)
++                # to incorrectly assume there are no distortions at all and skip
++                # necessary iterative solving. This is particularly problematic
++                # for sliced WCSes and mixed axes where only one axis may carry
++                # the correction. Consider distortion present if either axis has
++                # a corresponding lookup table.
++                self.det2im1 is not None or self.det2im2 is not None)
+*** End Patch

@@ -1,0 +1,82 @@
+
+--- a/astropy/io/ascii/rst.py
++++ b/astropy/io/ascii/rst.py
+@@ -28,7 +28,7 @@
+ 
+ 
+ class RST(FixedWidth):
+-    """reStructuredText simple format table.
++    """reStructuredText simple format table with optional multi-row headers.
+ 
+     See: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables
+ 
+@@ -50,6 +50,14 @@
+     +-------+----------+------+
+     """
+ 
++    _format_name = "rst"
++    _description = "reStructuredText simple table"
++
++    def __init__(self, header_rows=None):
++        super().__init__()
++        if header_rows is not None:
++            self.header.start_line = None
++            self.header_rows = header_rows
++
+     data_class = RSTData
+     header_class = RSTHeader
+ 
+@@ -58,6 +66,9 @@
+         self.position_line = None
+         self.start_line = 1
+         self.splitter_class = RSTSplitter
++        self.header_rows = getattr(self.data, 'header_rows', None)
++        if self.header_rows is None:
++            self.header_rows = ['name']
+ 
+     def get_cols(self, lines):
+         """Initialize the header Column objects from the table ``lines``.
+@@ -74,7 +85,16 @@
+         for i, line in enumerate(self.process_lines(lines)):
+             if i == 0:
+                 break
+-        self.names = next(self.splitter([line]))
++        
++        # Handle multi-row headers
++        if self.header_rows and len(self.header_rows) > 1:
++            header_lines = []
++            for j in range(len(self.header_rows)):
++                if i + j < len(list(self.process_lines(lines))):
++                    header_lines.append(list(self.process_lines(lines))[i + j])
++            self.names = next(self.splitter([header_lines[0]]))
++        else:
++            self.names = next(self.splitter([line]))
+         self._set_cols_from_names()
+ 
+     def write(self, lines):
+@@ -82,7 +102,24 @@
+         lines.append(self.splitter.join([x.info.name for x in self.cols]))
+         lines.append(self.splitter.join([x.info.name for x in self.cols]))
+ 
++    def write(self, lines):
++        if self.start_line is not None:
++            for i in range(self.start_line):
++                lines.append(self.write_spacer_lines[0])
++        
++        # Write header rows
++        if self.header_rows and len(self.header_rows) > 1:
++            for row_type in self.header_rows:
++                if row_type == 'name':
++                    lines.append(self.splitter.join([x.info.name for x in self.cols]))
++                elif row_type == 'unit':
++                    lines.append(self.splitter.join([str(x.info.unit or '') for x in self.cols]))
++        else:
++            lines.append(self.splitter.join([x.info.name for x in self.cols]))
++
+ 
+ class RSTData(FixedWidthData):
+     """Read the table data from a reStructuredText simple table."""
+     splitter_class = RSTSplitter
++
++    def __init__(self):
++        super().__init__()

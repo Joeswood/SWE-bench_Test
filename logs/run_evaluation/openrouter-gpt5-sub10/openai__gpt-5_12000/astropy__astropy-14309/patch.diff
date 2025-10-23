@@ -1,0 +1,32 @@
+
+*** Begin Patch
+*** Update File: astropy/io/fits/connect.py
+@@ def is_fits(origin, filepath, fileobj, *args, **kwargs):
+-    if fileobj is not None:
++    if fileobj is not None:
+         pos = fileobj.tell()
+         sig = fileobj.read(30)
+         fileobj.seek(pos)
+         return sig == FITS_SIGNATURE
+-    elif filepath is not None:
+-        if filepath.lower().endswith(
+-            (".fits", ".fits.gz", ".fit", ".fit.gz", ".fts", ".fts.gz")
+-        ):
+-            return True
+-    return isinstance(args[0], (HDUList, TableHDU, BinTableHDU, GroupsHDU))
++    elif filepath is not None:
++        # Ensure we can safely check extensions even if filepath is PathLike
++        try:
++            lower_path = filepath.lower()
++        except AttributeError:
++            lower_path = str(filepath).lower()
++        if lower_path.endswith(
++            (".fits", ".fits.gz", ".fit", ".fit.gz", ".fts", ".fts.gz")
++        ):
++            return True
++    # For write operations, the first arg can be an HDU-like object.
++    # Guard against empty args to avoid IndexError (see astropy#XXXXX).
++    if args:
++        return isinstance(args[0], (HDUList, TableHDU, BinTableHDU, GroupsHDU))
++    return False
+*** End Patch

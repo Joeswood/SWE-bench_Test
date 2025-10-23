@@ -1,0 +1,45 @@
+
+--- a/astropy/io/ascii/rst.py
++++ b/astropy/io/ascii/rst.py
+@@ -33,6 +33,10 @@ class RST(FixedWidth):
+     _format_name = "rst"
+     _description = "reStructuredText simple format table"
+ 
++    def __init__(self, header_rows=None):
++        super().__init__()
++        self.header_rows = header_rows or ["name"]
++
+     def __init__(self):
+         super().__init__(delimiter_pad=None, bookend=False)
+ 
+@@ -48,6 +52,29 @@ class RST(FixedWidth):
+         lines.append(self.splitter.join([x.info.name for x in self.cols]))
+         lines.append(self.splitter.join(["=" * width for width in self.widths]))
+ 
++    def write(self, lines):
++        """
++        Write header and data to lines.
++        
++        Parameters
++        ----------
++        lines : list
++            List of lines for output
++        """
++        # Set column widths and header based on header_rows
++        self.header.cols = self.cols
++        self.data.cols = self.cols
++        
++        # Get widths for all columns including header rows
++        widths = [col.info.name for col in self.cols]
++        for row_type in self.header_rows:
++            if row_type == "unit":
++                widths = [max(len(str(getattr(col.info, "unit", ""))), len(col.info.name)) 
++                         for col in self.cols]
++        
++        self.widths = [max(width, 1) for width in self._get_widths(self.cols, widths)]
++        self.header.write(lines)
++        self.data.write(lines)
++
+ 
+ class RSTData(FixedWidthData):
+     splitter_class = RSTSplitter

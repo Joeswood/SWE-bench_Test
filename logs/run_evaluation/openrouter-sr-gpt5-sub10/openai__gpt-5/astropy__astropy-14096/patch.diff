@@ -1,0 +1,77 @@
+*** Begin Patch
+*** Update File: astropy/coordinates/baseframe.py
+@@
+     def __getattr__(self, attr):
+         """
+         Allow access to attributes on the representation and differential as
+         found via ``self.get_representation_component_names``.
+ 
+         TODO: We should handle dynamic representation transforms here (e.g.,
+         `.cylindrical`) instead of defining properties as below.
+         """
+ 
++        # If attribute access failed in normal lookup but an attribute with this
++        # name exists on the class (e.g., a property) whose getter raised an
++        # AttributeError internally, try to access it explicitly so that the
++        # original AttributeError (and message) is preserved. This avoids
++        # masking the underlying error by raising that this object has no
++        # attribute named `attr` (see gh-issue about misleading messages when
++        # subclass properties raise AttributeError).
++        for cls in type(self).__mro__:
++            if attr in cls.__dict__:
++                obj = cls.__dict__[attr]
++                try:
++                    if hasattr(obj, "__get__"):
++                        return obj.__get__(self, type(self))
++                    else:
++                        return obj
++                except AttributeError:
++                    # Bubble up the original AttributeError from the descriptor.
++                    raise
++                except Exception:
++                    # Propagate any other exception types unchanged.
++                    raise
++
+         # attr == '_representation' is likely from the hasattr() test in the
+         # representation property which is used for
+         # self.representation_component_names.
+         #
+         # Prevent infinite recursion here.
+*** End Patch
+*** Begin Patch
+*** Update File: astropy/coordinates/sky_coordinate.py
+@@
+     def __getattr__(self, attr):
+         """
+         Overrides getattr to return coordinates that this can be transformed
+         to, based on the alias attr in the primary transform graph.
+         """
++        # If the attribute exists on the class (e.g., is a property) but its
++        # getter raised an AttributeError during normal lookup, we arrived here.
++        # In this case, try to access it explicitly via the descriptor protocol
++        # to preserve and propagate the original AttributeError (e.g., when a
++        # user-defined property refers to a missing attribute). This avoids
++        # raising a misleading "'... has no attribute <attr>'" for <attr>
++        # instead of the inner missing attribute.
++        for cls in type(self).__mro__:
++            if attr in cls.__dict__:
++                obj = cls.__dict__[attr]
++                try:
++                    if hasattr(obj, "__get__"):
++                        return obj.__get__(self, type(self))
++                    else:
++                        return obj
++                except AttributeError:
++                    # Preserve the original AttributeError raised by the getter.
++                    raise
++                except Exception:
++                    # Propagate other exceptions unchanged.
++                    raise
++
+         if "_sky_coord_frame" in self.__dict__:
+             if self._is_name(attr):
+                 return self  # Should this be a deepcopy of self?
+ 
+             # Anything in the set of all possible frame_attr_names is handled
+             # here. If the attr is relevant for the current frame then delegate
+*** End Patch

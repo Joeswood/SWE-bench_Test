@@ -1,0 +1,71 @@
+2025-10-13 21:28:29,502 - INFO - Creating container for astropy__astropy-14182...
+2025-10-13 21:28:30,258 - INFO - Container for astropy__astropy-14182 created: b4fbe3a3a1d6e99291a1cd8f0f42a2dde45717ed5307f736c6d2d526c8e58461
+2025-10-13 21:28:30,757 - INFO - Container for astropy__astropy-14182 started: b4fbe3a3a1d6e99291a1cd8f0f42a2dde45717ed5307f736c6d2d526c8e58461
+2025-10-13 21:28:30,758 - INFO - Intermediate patch for astropy__astropy-14182 written to logs/run_evaluation/openrouter-gpt5-sub10/openai__gpt-5/astropy__astropy-14182/patch.diff, now applying to container...
+2025-10-13 21:28:30,916 - INFO - Failed to apply patch to container: git apply --verbose
+2025-10-13 21:28:30,983 - INFO - Failed to apply patch to container: git apply --verbose --reject
+2025-10-13 21:28:31,195 - INFO - >>>>> Applied Patch:
+patching file astropy/io/ascii/core.py
+Hunk #1 succeeded at 1658 with fuzz 1 (offset 340 lines).
+patching file astropy/io/ascii/docs.py
+Hunk #1 succeeded at 185 with fuzz 3 (offset -6 lines).
+patch unexpectedly ends in middle of line
+patch unexpectedly ends in middle of line
+
+2025-10-13 21:28:31,866 - INFO - Git diff before:
+diff --git a/astropy/io/ascii/core.py b/astropy/io/ascii/core.py
+index 381b5b13d..a1752b21c 100644
+--- a/astropy/io/ascii/core.py
++++ b/astropy/io/ascii/core.py
+@@ -1659,6 +1659,7 @@ extra_reader_pars = (
+     "fill_values",
+     "fill_include_names",
+     "fill_exclude_names",
++    "header_rows",
+ )
+ 
+ 
+diff --git a/astropy/io/ascii/docs.py b/astropy/io/ascii/docs.py
+index 24235f82e..7c6dc7042 100644
+--- a/astropy/io/ascii/docs.py
++++ b/astropy/io/ascii/docs.py
+@@ -186,4 +186,5 @@ WRITE_KWARG_TYPES = {
+     "exclude_names": "list-like",
+     "fast_writer": (bool, str),
+     "overwrite": (bool),
++    "header_rows": "list-like",
+ }
+2025-10-13 21:28:31,866 - INFO - Eval script for astropy__astropy-14182 written to logs/run_evaluation/openrouter-gpt5-sub10/openai__gpt-5/astropy__astropy-14182/eval.sh; copying to container...
+2025-10-13 21:30:46,152 - INFO - Test runtime: 134.22 seconds
+2025-10-13 21:30:46,154 - INFO - Test output for astropy__astropy-14182 written to logs/run_evaluation/openrouter-gpt5-sub10/openai__gpt-5/astropy__astropy-14182/test_output.txt
+2025-10-13 21:30:46,233 - INFO - Git diff after:
+diff --git a/astropy/io/ascii/core.py b/astropy/io/ascii/core.py
+index 381b5b13d..a1752b21c 100644
+--- a/astropy/io/ascii/core.py
++++ b/astropy/io/ascii/core.py
+@@ -1659,6 +1659,7 @@ extra_reader_pars = (
+     "fill_values",
+     "fill_include_names",
+     "fill_exclude_names",
++    "header_rows",
+ )
+ 
+ 
+diff --git a/astropy/io/ascii/docs.py b/astropy/io/ascii/docs.py
+index 24235f82e..7c6dc7042 100644
+--- a/astropy/io/ascii/docs.py
++++ b/astropy/io/ascii/docs.py
+@@ -186,4 +186,5 @@ WRITE_KWARG_TYPES = {
+     "exclude_names": "list-like",
+     "fast_writer": (bool, str),
+     "overwrite": (bool),
++    "header_rows": "list-like",
+ }
+2025-10-13 21:30:46,233 - INFO - Grading answer for astropy__astropy-14182...
+2025-10-13 21:30:46,240 - INFO - report: {'astropy__astropy-14182': {'patch_is_None': False, 'patch_exists': True, 'patch_successfully_applied': True, 'resolved': False, 'tests_status': {'FAIL_TO_PASS': {'success': [], 'failure': ['astropy/io/ascii/tests/test_rst.py::test_rst_with_header_rows']}, 'PASS_TO_PASS': {'success': ['astropy/io/ascii/tests/test_rst.py::test_read_normal', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_names', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_names_include', 'astropy/io/ascii/tests/test_rst.py::test_read_normal_exclude', 'astropy/io/ascii/tests/test_rst.py::test_read_unbounded_right_column', 'astropy/io/ascii/tests/test_rst.py::test_read_unbounded_right_column_header', 'astropy/io/ascii/tests/test_rst.py::test_read_right_indented_table', 'astropy/io/ascii/tests/test_rst.py::test_trailing_spaces_in_row_definition', 'astropy/io/ascii/tests/test_rst.py::test_write_normal'], 'failure': []}, 'FAIL_TO_FAIL': {'success': [], 'failure': []}, 'PASS_TO_FAIL': {'success': [], 'failure': []}}}}
+Result for astropy__astropy-14182: resolved: False
+2025-10-13 21:30:46,241 - INFO - Attempting to stop container sweb.eval.astropy__astropy-14182.openrouter-gpt5-sub10...
+2025-10-13 21:31:01,861 - INFO - Attempting to remove container sweb.eval.astropy__astropy-14182.openrouter-gpt5-sub10...
+2025-10-13 21:31:01,981 - INFO - Container sweb.eval.astropy__astropy-14182.openrouter-gpt5-sub10 removed.
+2025-10-13 21:31:01,981 - INFO - Attempting to remove image swebench/sweb.eval.x86_64.astropy_1776_astropy-14182:latest...
+2025-10-13 21:31:02,178 - INFO - Image swebench/sweb.eval.x86_64.astropy_1776_astropy-14182:latest removed.

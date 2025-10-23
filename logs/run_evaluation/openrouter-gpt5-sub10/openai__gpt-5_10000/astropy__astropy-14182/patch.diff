@@ -1,0 +1,47 @@
+
+--- a/astropy/io/ascii/core.py
++++ b/astropy/io/ascii/core.py
+@@ -1318,6 +1318,7 @@
+     "exclude_names",
+     "fill_values",
+     "fill_include_names",
+-    "fill_exclude_names",
++    "fill_exclude_names",
++    "header_rows",
+ )
+ 
+ 
+@@ -1397,6 +1398,23 @@
+         writer.data.fill_include_names = kwargs["fill_include_names"]
+     if "fill_exclude_names" in kwargs:
+         writer.data.fill_exclude_names = kwargs["fill_exclude_names"]
++    # Allow specifying multiple header rows (e.g. "name", "unit") for writers
++    # that support this option (e.g. fixed_width and rst). Some writers may not
++    # accept "header_rows" in their __init__, so we set it as an attribute on
++    # the writer, header, and data objects if present.
++    if "header_rows" in kwargs:
++        header_rows = kwargs["header_rows"]
++        # Ensure list-like for downstream consumers
++        try:
++            _ = header_rows[0]  # tries to index, will raise if not list-like
++        except Exception:
++            header_rows = [header_rows]
++        with suppress(Exception):
++            writer.header_rows = header_rows
++        with suppress(Exception):
++            writer.header.header_rows = header_rows
++        with suppress(Exception):
++            writer.data.header_rows = header_rows
+     return writer
+ 
+--- a/astropy/io/ascii/docs.py
++++ b/astropy/io/ascii/docs.py
+@@ -191,6 +191,7 @@
+     "include_names": "list-like",
+     "exclude_names": "list-like",
+     "fast_writer": (bool, str),
+     "overwrite": (bool),
++    "header_rows": "list-like",
+ }
+ 
+ 

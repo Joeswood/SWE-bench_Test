@@ -1,0 +1,31 @@
+
+*** Begin Patch
+*** Update File: astropy/wcs/wcs.py
+@@
+     def has_distortion(self):
+         """
+         Returns `True` if any distortion terms are present.
+         """
+-        return (self.sip is not None or
+-                self.cpdis1 is not None or self.cpdis2 is not None or
+-                self.det2im1 is not None and self.det2im2 is not None)
++        # A WCS has distortion if any of the supported distortion components are present:
++        # - SIP polynomial distortion (self.sip)
++        # - FITS "distortion paper" lookup tables (self.cpdis1 or self.cpdis2)
++        # - Detector-to-image lookup tables (self.det2im1 or self.det2im2)
++        #
++        # Previously we required both det2im tables to be present which could
++        # incorrectly report that no distortion was present when only one of the
++        # axes had a detector-to-image correction defined. This can cause code paths
++        # that assume no distortion (e.g., skipping iterative solvers) to be taken
++        # incorrectly and lead to unstable or nonsensical results when slicing WCSes
++        # with coupled axes. Treat the presence of either table as an indication of
++        # distortion so that downstream code takes the safe path.
++        return (
++            self.sip is not None
++            or self.cpdis1 is not None
++            or self.cpdis2 is not None
++            or self.det2im1 is not None
++            or self.det2im2 is not None
++        )
+*** End Patch

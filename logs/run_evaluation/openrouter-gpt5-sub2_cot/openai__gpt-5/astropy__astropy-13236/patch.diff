@@ -1,0 +1,33 @@
+
+--- a/astropy/table/table.py
++++ b/astropy/table/table.py
+@@ -608,10 +608,22 @@ class Table:
+                 raise TypeError('Mixin handler for object of type '
+                                 f'{fully_qualified_name} '
+                                 'did not return a valid mixin column')
+ 
+         # Structured ndarray gets viewed as a mixin unless already a valid
+         # mixin class
+         if (not isinstance(data, Column) and not data_is_mixin
+                 and isinstance(data, np.ndarray) and len(data.dtype) > 1):
++            # Issue a FutureWarning about the upcoming behavior change.
++            # Currently, structured numpy arrays are automatically converted to
++            # NdarrayMixin when added to a Table. In a future release (5.2),
++            # this will change and such arrays will be added as a Column instead.
++            # Users can opt in to the future behavior now by explicitly wrapping
++            # the data in Column, e.g. Column(structured_array, name=...).
++            warnings.warn(
++                "Structured numpy array input is currently converted to NdarrayMixin "
++                "when added to a Table. This behavior is deprecated and will change in "
++                "Astropy 5.2: structured arrays will be added as a Column instead. "
++                "To adopt the future behavior now and silence this warning, wrap the "
++                "array explicitly with astropy.table.Column(...).",
++                FutureWarning,
++            )
+             data = data.view(NdarrayMixin)
+             data_is_mixin = True
+ 
+         # Get the final column name using precedence.  Some objects may not
+         # have an info attribute. Also avoid creating info as a side effect.
+         if not name:
+             if isinstance(data, Column):

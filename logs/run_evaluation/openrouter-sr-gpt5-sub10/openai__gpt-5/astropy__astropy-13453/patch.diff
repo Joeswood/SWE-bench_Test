@@ -1,0 +1,34 @@
+
+*** Begin Patch
+*** Update File: astropy/io/ascii/ui.py
+@@ def write(table, output=None, format=None, Writer=None, fast_writer=True, *,
+ 
+     Writer = _get_format_class(format, Writer, 'Writer')
+     writer = get_writer(Writer=Writer, fast_writer=fast_writer, **kwargs)
++
++    # Ensure that HTML writer respects the 'formats' mapping by applying these
++    # as Column info.format on the table copy that will be written out.
++    # The HTML writer ultimately uses Table's pretty-printer which consults
++    # Column.info.format for formatting, but it does not use the io.ascii
++    # 'formats' kwarg directly. For other writers the 'formats' kwarg is
++    # handled within the writer/outputter, so we restrict this to HTML.
++    if getattr(writer, '_format_name', None) == 'html':
++        fmt_map = kwargs.get('formats')
++        if isinstance(fmt_map, dict):
++            for key, fmt in fmt_map.items():
++                # Only apply formats specified by column name.  This mirrors the
++                # earlier validation that warns for keys that do not match names.
++                if isinstance(key, str) and key in table.colnames:
++                    try:
++                        table[key].info.format = fmt
++                    except Exception:
++                        # Be conservative: ignore any problematic format assignment
++                        # and let the writer proceed with default formatting.
++                        pass
++
+     if writer._format_name in core.FAST_CLASSES:
+         writer.write(table, output)
+         return
+ 
+     lines = writer.write(table)
+*** End Patch

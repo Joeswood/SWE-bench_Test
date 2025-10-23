@@ -1,0 +1,40 @@
+
+*** Begin Patch
+*** Update File: astropy/coordinates/sky_coordinate.py
+@@
+ 
+     def __getattr__(self, attr):
+         """
+         Overrides getattr to return coordinates that this can be transformed
+         to, based on the alias attr in the primary transform graph.
+         """
++        # If a subclass defines a descriptor (e.g., a @property) and that
++        # descriptor raises an AttributeError internally (for instance because
++        # it tries to access a missing attribute), Python will fall back to
++        # calling __getattr__ for the original attribute name. In that case,
++        # we want to preserve and propagate the original AttributeError raised
++        # by the descriptor, so that the error message reflects the actual
++        # missing attribute (e.g., 'random_attr') rather than the property
++        # name (e.g., 'prop'). We therefore attempt normal attribute access
++        # first and only continue with SkyCoord's dynamic handling if the
++        # attribute truly does not exist on the class.
++        try:
++            return object.__getattribute__(self, attr)
++        except AttributeError:
++            # Only propagate the AttributeError if the attribute is actually
++            # defined on the class or one of its bases (i.e., is a descriptor
++            # such as a property). Otherwise, fall through to SkyCoord's
++            # dynamic attribute handling below.
++            for cls in self.__class__.__mro__:
++                if attr in cls.__dict__:
++                    # Attribute exists on the class but failed during access:
++                    # re-raise to preserve the original error/message.
++                    raise
++
+         if "_sky_coord_frame" in self.__dict__:
+             if self._is_name(attr):
+                 return self  # Should this be a deepcopy of self?
+ 
+             # Anything in the set of all possible frame_attr_names is handled
+             # here. If the attr is relevant for the current frame then delegate
+*** End Patch

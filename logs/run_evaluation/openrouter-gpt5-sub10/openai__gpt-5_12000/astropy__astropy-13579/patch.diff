@@ -1,0 +1,29 @@
+
+--- a/astropy/wcs/wcs.py
++++ b/astropy/wcs/wcs.py
+@@ -3225,10 +3225,12 @@
+     def has_distortion(self):
+         """
+         Returns `True` if any distortion terms are present.
+         """
+-        return (self.sip is not None or
+-                self.cpdis1 is not None or self.cpdis2 is not None or
+-                self.det2im1 is not None and self.det2im2 is not None)
++        # Any single presence of a distortion component means the WCS is
++        # distorted. Previously, det2im required both tables to be present,
++        # which incorrectly reported no distortion when only one axis had a
++        # detector-to-image correction.
++        return ((self.sip is not None) or
++                (self.cpdis1 is not None) or (self.cpdis2 is not None) or
++                (self.det2im1 is not None) or (self.det2im2 is not None))
+ 
+     @property
+     def pixel_scale_matrix(self):
+ 
+-        try:
++        try:
+             cdelt = np.diag(self.wcs.get_cdelt())
+             pc = self.wcs.get_pc()
+         except InconsistentAxisTypesError:
+             try:
+                 # for non-celestial axes, get_cdelt doesn't work

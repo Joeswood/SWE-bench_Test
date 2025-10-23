@@ -1,0 +1,39 @@
+
+--- a/astropy/io/ascii/html.py
++++ b/astropy/io/ascii/html.py
+@@ -90,6 +90,7 @@ class HTML(core.BaseReader):
+         self.html = {}
+ 
+     def write(self, lines):
++        """Write the table as HTML with proper formatting."""
+         # Check to see if the table has only one row. If so, then
+         # we need to add a dummy row to the table so that the
+         # table will be written out correctly.
+@@ -100,7 +101,7 @@ class HTML(core.BaseReader):
+         if 'multicol' in self.html:
+             multicol = self.html['multicol']
+         else:
+-            multicol = False
++            multicol = False  
+ 
+         if 'table_id' in self.html:
+             table_id = self.html['table_id']
+@@ -117,6 +118,18 @@ class HTML(core.BaseReader):
+         else:
+             raw_html_cols = None
+ 
++        # Apply formats to columns if specified
++        if hasattr(self, 'formats') and self.formats:
++            from astropy.table.pprint import get_auto_format_func
++            for col in self.cols:
++                col_format = self.formats.get(col.info.name)
++                if col_format is not None:
++                    # Store the format in the column's info
++                    col.info.format = col_format
++                    # Clear any cached format functions to force re-evaluation
++                    if hasattr(col.info, '_format_funcs'):
++                        col.info._format_funcs.clear()
++
+         # Use XMLWriter to output HTML to lines
+         w = writer.XMLWriter(ListWriter(lines))
+ 

@@ -1,0 +1,103 @@
+*** Begin Patch
+*** Update File: astropy/io/ascii/ui.py
+@@ def write(
+     Writer = _get_format_class(format, Writer, "Writer")
+-    writer = get_writer(Writer=Writer, fast_writer=fast_writer, **kwargs)
++
++    # Support header_rows=["name","unit"] for ascii.rst without passing it to
++    # the writer (RST writer may not accept this kwarg). We will post-process
++    # the generated lines to inject additional header rows.
++    _rst_header_rows = None
++    if (format == "ascii.rst" or (Writer and getattr(Writer, "_format_name", "") == "rst")) and "header_rows" in kwargs:
++        _rst_header_rows = kwargs.pop("header_rows")
++
++    writer = get_writer(Writer=Writer, fast_writer=fast_writer, **kwargs)
+     if writer._format_name in core.FAST_CLASSES:
+         writer.write(table, output)
+         return
+ 
+     lines = writer.write(table)
+ 
++    # If requested and applicable, insert extra header rows (e.g., units) into
++    # the RST table output. This is a best-effort implementation that centers
++    # the units within the header cell widths determined by the RST writer.
++    if (format == "ascii.rst" or (Writer and getattr(Writer, "_format_name", "") == "rst")) and _rst_header_rows:
++        try:
++            # RST simple table structure expected:
++            # 0: top separator of '='
++            # 1: header names
++            # 2: header separator of '='
++            # ...
++            # Find separator lines consisting only of '=' and spaces.
++            sep_idxs = [
++                i for i, ln in enumerate(lines)
++                if ln and set(ln) <= set(" =") and ln.replace(" ", "") and set(ln.replace(" ", "")) == {"="}
++            ]
++            if len(sep_idxs) >= 2:
++                top_sep_idx = sep_idxs[0]
++                head_sep_idx = sep_idxs[1]
++                header_line_idx = head_sep_idx - 1
++                border = lines[top_sep_idx]
++                header = lines[header_line_idx]
++
++                # Build a mapping from header cell text to unit string
++                # Determine column segments from contiguous '=' runs in border
++                segments = []
++                i = 0
++                while i < len(border):
++                    if border[i] == "=":
++                        j = i
++                        while j < len(border) and border[j] == "=":
++                            j += 1
++                        segments.append((i, j))
++                        i = j
++                    else:
++                        i += 1
++
++                # Helper to construct a row from per-column values
++                def _make_row(values):
++                    row_chars = list(" " * len(border))
++                    for (start, end), val in zip(segments, values):
++                        width = end - start
++                        sval = "" if val is None else str(val)
++                        if len(sval) > width:
++                            sval = sval[:width]
++                        sval = sval.center(width)
++                        row_chars[start:end] = list(sval)
++                    return "".join(row_chars)
++
++                # Extract header names by slicing header using segments
++                header_names = [header[s:e].strip() for (s, e) in segments]
++
++                # Prepare values for supported header rows
++                # Currently support "unit"; "name" already present
++                extra_rows = []
++                if any(hr.lower() == "unit" for hr in _rst_header_rows):
++                    # Build unit list aligned with header order
++                    units = []
++                    for name in header_names:
++                        col = table.columns.get(name)
++                        ustr = None
++                        if col is not None:
++                            unit = getattr(col, "unit", None)
++                            if unit is not None:
++                                try:
++                                    ustr = unit.to_string()
++                                except Exception:
++                                    ustr = str(unit)
++                        units.append(ustr if ustr is not None else "")
++                    extra_rows.append(_make_row(units))
++
++                # Insert extra rows just before the header separator
++                for idx, r in enumerate(extra_rows):
++                    lines.insert(head_sep_idx + idx, r)
++        except Exception:
++            # If anything goes wrong, fall back silently to the original output.
++            pass
++
+     # Write the lines to output
+     outstr = os.linesep.join(lines)
+     if not hasattr(output, "write"):
+         # NOTE: we need to specify newline='', otherwise the default
+         # behavior is for Python to translate \r\n (which we write because
+*** End Patch

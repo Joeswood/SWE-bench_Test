@@ -1,0 +1,89 @@
+<patch>
+*** Begin Patch
+*** Update File: astropy/io/ascii/core.py
+@@
+ 
+ def _get_writer(Writer, fast_writer, **kwargs):
+     """Initialize a table writer allowing for common customizations. This
+     routine is for internal (package) use only and is useful because it depends
+     only on the "core" module."""
++    import inspect
+ 
+     from .fastbasic import FastBasic
+ 
+     # A value of None for fill_values imply getting the default string
+     # representation of masked values (depending on the writer class), but the
+@@ def _get_writer(Writer, fast_writer, **kwargs):
+     elif fast_writer and f"fast_{Writer._format_name}" in FAST_CLASSES:
+         # Switch to fast writer
+         kwargs["fast_writer"] = fast_writer
+         return FAST_CLASSES[f"fast_{Writer._format_name}"](**kwargs)
+ 
+     writer_kwargs = {k: v for k, v in kwargs.items() if k not in extra_writer_pars}
++    # Some writers (e.g. RST) may not accept header_rows in __init__.  If the
++    # writer __init__ does not accept it (and does not take **kwargs), remove
++    # the kwarg here to avoid a TypeError while still allowing writers that
++    # support it (e.g. fixed_width) to receive it.
++    saved_header_rows = None
++    if "header_rows" in writer_kwargs:
++        try:
++            sig = inspect.signature(Writer.__init__)
++            params = sig.parameters
++            accepts_header_rows = (
++                "header_rows" in params
++                or any(
++                    p.kind == inspect.Parameter.VAR_KEYWORD
++                    for p in params.values()
++                )
++            )
++        except (ValueError, TypeError):
++            # Be conservative if introspection fails: assume it does not accept.
++            accepts_header_rows = False
++        if not accepts_header_rows:
++            saved_header_rows = writer_kwargs.pop("header_rows")
++
+     writer = Writer(**writer_kwargs)
+ 
++    # If we removed header_rows for a writer that doesn't accept it in __init__,
++    # try to pass it along via an attribute if possible.
++    if saved_header_rows is not None:
++        if hasattr(writer, "header_rows"):
++            writer.header_rows = saved_header_rows
++        elif hasattr(writer, "header") and hasattr(writer.header, "header_rows"):
++            writer.header.header_rows = saved_header_rows
++
+     if "delimiter" in kwargs:
+         writer.header.splitter.delimiter = kwargs["delimiter"]
+         writer.data.splitter.delimiter = kwargs["delimiter"]
+     if "comment" in kwargs:
+         writer.header.write_comment = kwargs["comment"]
+*** End Patch
+*** Begin Patch
+*** Update File: astropy/io/ascii/docs.py
+@@
+     names : list
+         List of names corresponding to each data column
+     include_names : list
+         List of names to include in output.
+     exclude_names : list
+-        List of names to exclude from output (applied after ``include_names``)
++        List of names to exclude from output (applied after ``include_names``)
++    header_rows : list
++        For writers that support multiple header rows (e.g., fixed-width and
++        some others), this specifies which header rows to include, such as
++        ``["name", "unit"]``. Unsupported writers will ignore this argument.
+     fast_writer : bool, str
+         Whether to use the fast Cython writer.  Can be `True` (use fast writer
+         if available), `False` (do not use fast writer), or ``'force'`` (use
+         fast writer and fail if not available, mostly for testing).
+     overwrite : bool
+@@
+     "names": "list-like",
+     "include_names": "list-like",
+     "exclude_names": "list-like",
++    "header_rows": "list-like",
+     "fast_writer": (bool, str),
+     "overwrite": (bool),
+ }
+ 
+*** End Patch

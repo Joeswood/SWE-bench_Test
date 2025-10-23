@@ -1,0 +1,18 @@
+
+--- a/astropy/coordinates/sky_coordinate.py
++++ b/astropy/coordinates/sky_coordinate.py
+@@ -133,8 +133,10 @@
+         # Use __setitem__ machinery to check for consistency of all skycoords
+         for skycoord in skycoords[1:]:
+             try:
+                 out[0] = skycoord[0]
+             except Exception as err:
+-                raise ValueError(f'Input skycoords are inconsistent.') from err
++                # Provide a more informative error message to aid debugging by
++                # including the original exception details.
++                raise ValueError(f'Input skycoords are inconsistent: {err}') from err
+ 
+         # Set (merged) info attributes
+         for attr in ('name', 'meta', 'description'):
+             if attr in attrs:
+                 setattr(out.info, attr, attrs[attr])

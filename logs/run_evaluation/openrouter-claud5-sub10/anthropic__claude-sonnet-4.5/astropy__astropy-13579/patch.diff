@@ -1,0 +1,37 @@
+
+--- a/astropy/wcs/wcsapi/sliced_low_level_wcs.py
++++ b/astropy/wcs/wcsapi/sliced_low_level_wcs.py
+@@ -1,3 +1,4 @@
++import numpy as np
+ from .low_level_api import BaseLowLevelWCS
+ from .wrappers.sliced_wcs import sanitize_slices
+ 
+@@ -80,6 +81,15 @@ class SlicedLowLevelWCS(BaseLowLevelWCS):
+         # Expand world coordinates to full dimensionality
+         world_full = [None] * self._wcs.world_n_dim
+         
++        # First, we need to get the world coordinates for the sliced dimensions
++        # by doing a pixel_to_world on the sliced pixel coordinates
++        if self._pixel_keep.size < self._wcs.pixel_n_dim:
++            # Create pixel coordinates for the sliced positions
++            pixel_sliced = np.zeros(self._wcs.pixel_n_dim)
++            for ipixel in range(self._wcs.pixel_n_dim):
++                if ipixel not in self._pixel_keep:
++                    pixel_sliced[ipixel] = self._slices_pixel[ipixel]
++            world_sliced = self._wcs.pixel_to_world_values(*pixel_sliced)
++        
+         iworld_curr = 0
+         for iworld in range(self._wcs.world_n_dim):
+             if iworld in self._world_keep:
+@@ -87,7 +97,10 @@ class SlicedLowLevelWCS(BaseLowLevelWCS):
+                 iworld_curr += 1
+             else:
+                 # Use the world coordinate from the sliced position
+-                world_full[iworld] = self._wcs.pixel_to_world_values(*self._slices_pixel)[iworld]
++                if self._pixel_keep.size < self._wcs.pixel_n_dim:
++                    world_full[iworld] = world_sliced[iworld]
++                else:
++                    world_full[iworld] = self._wcs.pixel_to_world_values(*self._slices_pixel)[iworld]
+         
+         # Call the underlying WCS world_to_pixel_values
+         pixel_full = self._wcs.world_to_pixel_values(*world_full)
