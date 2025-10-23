@@ -14,6 +14,12 @@ from tqdm.auto import tqdm
 import numpy as np
 import tiktoken
 import openai
+TOKENIZER_OVERRIDE = os.environ.get("TOKENIZER_OVERRIDE")  # "cl100k"
+try:
+    # Prefer OpenAI v1 client if available
+    from openai import OpenAI as _OpenAIClient
+except Exception:  # pragma: no cover
+    _OpenAIClient = None
 from anthropic import HUMAN_PROMPT, AI_PROMPT, Anthropic
 from tenacity import (
     retry,
@@ -24,10 +30,15 @@ from datasets import load_dataset, load_from_disk
 from swebench.inference.make_datasets.utils import extract_diff
 from argparse import ArgumentParser
 import logging
+from dotenv import load_dotenv
+from swebench.inference.langgraph_patch_flow import call_chat_via_langgraph
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 dotenv.load_dotenv()
+
+# Global default client for OpenAI v1 SDK when routing via OpenRouter
+OPENAI_CLIENT = None
 
 MODEL_LIMITS = {
     "claude-instant-1": 100_000,
@@ -42,6 +53,8 @@ MODEL_LIMITS = {
     "gpt-4-0613": 8_192,
     "gpt-4-1106-preview": 128_000,
     "gpt-4-0125-preview": 128_000,
+    "openai/gpt-5": 128_000, 
+    "x-ai/grok-code-fast-1": 256_000
 }
 
 # The cost per token for each model input.
@@ -61,6 +74,8 @@ MODEL_COST_PER_INPUT = {
     "gpt-4-32k": 0.00006,
     "gpt-4-1106-preview": 0.00001,
     "gpt-4-0125-preview": 0.00001,
+    "openai/gpt-5": 0.00000125,
+    "x-ai/grok-code-fast-1": 0.0000002,
 }
 
 # The cost per token for each model output.
@@ -80,6 +95,8 @@ MODEL_COST_PER_OUTPUT = {
     "gpt-4-32k": 0.00012,
     "gpt-4-1106-preview": 0.00003,
     "gpt-4-0125-preview": 0.00003,
+    "openai/gpt-5": 0.00001,
+    "x-ai/grok-code-fast-1": 0.0000015
 }
 
 # used for azure
@@ -88,6 +105,23 @@ ENGINES = {
     "gpt-4-0613": "gpt-4",
     "gpt-4-32k-0613": "gpt-4-32k",
 }
+
+
+# Fallback helpers for unknown model names (e.g., OpenRouter model ids)
+def get_model_limit(model_name_or_path: str) -> int:
+    """Return context length limit for a model, with a safe default for unknown models."""
+    default_limit = int(os.environ.get("DEFAULT_MODEL_LIMIT", "128000"))
+    return MODEL_LIMITS.get(model_name_or_path, default_limit)
+
+
+def get_cost_per_input(model_name_or_path: str) -> float:
+    """Return input token price; fall back to 0.0 if unknown."""
+    return MODEL_COST_PER_INPUT.get(model_name_or_path, 0.0)
+
+
+def get_cost_per_output(model_name_or_path: str) -> float:
+    """Return output token price; fall back to 0.0 if unknown."""
+    return MODEL_COST_PER_OUTPUT.get(model_name_or_path, 0.0)
 
 
 def calc_cost(model_name, input_tokens, output_tokens):
@@ -101,8 +135,8 @@ def calc_cost(model_name, input_tokens, output_tokens):
     float: The cost of the response.
     """
     cost = (
-        MODEL_COST_PER_INPUT[model_name] * input_tokens
-        + MODEL_COST_PER_OUTPUT[model_name] * output_tokens
+        get_cost_per_input(model_name) * input_tokens
+        + get_cost_per_output(model_name) * output_tokens
     )
     logger.info(
         f"input_tokens={input_tokens}, output_tokens={output_tokens}, cost={cost:.2f}"
@@ -126,8 +160,11 @@ def call_chat(model_name_or_path, inputs, use_azure, temperature, top_p, **model
     system_messages = inputs.split("\n", 1)[0]
     user_message = inputs.split("\n", 1)[1]
     try:
+        # Choose client: prefer instantiated v1 client (e.g., OpenRouter),
+        # otherwise fallback to module-level convenience API
+        _client = OPENAI_CLIENT if OPENAI_CLIENT is not None else openai
         if use_azure:
-            response = openai.chat.completions.create(
+            response = _client.chat.completions.create(
                 engine=ENGINES[model_name_or_path] if use_azure else None,
                 messages=[
                     {"role": "system", "content": system_messages},
@@ -138,7 +175,7 @@ def call_chat(model_name_or_path, inputs, use_azure, temperature, top_p, **model
                 **model_args,
             )
         else:
-            response = openai.chat.completions.create(
+            response = _client.chat.completions.create(
                 model=model_name_or_path,
                 messages=[
                     {"role": "system", "content": system_messages},
@@ -171,6 +208,19 @@ def claude_tokenize(string: str, api) -> int:
     return num_tokens
 
 
+def choose_encoding(model_name_or_path: str):
+    """Choose cl100k encoding for the model if TOKENIZER_OVERRIDE is set to cl100k."""
+    if TOKENIZER_OVERRIDE == "cl100k":
+        return tiktoken.get_encoding("cl100k_base")
+    try:
+        return tiktoken.encoding_for_model(model_name_or_path)
+    except Exception:
+        try:
+            return tiktoken.get_encoding("cl100k_base")
+        except Exception:
+            return tiktoken.get_encoding("p50k_base")
+
+
 def openai_inference(
     test_dataset,
     model_name_or_path,
@@ -190,27 +240,72 @@ def openai_inference(
     existing_ids (set): A set of ids that have already been processed.
     max_cost (float): The maximum cost to spend on inference.
     """
-    encoding = tiktoken.encoding_for_model(model_name_or_path)
-    test_dataset = test_dataset.filter(
-        lambda x: gpt_tokenize(x["text"], encoding) <= MODEL_LIMITS[model_name_or_path],
+    # Try to get encoding for the model; fallback for unknown OpenRouter model ids
+    try:
+        encoding = tiktoken.choose_encoding(model_name_or_path)
+    except Exception:
+        try:
+            encoding = tiktoken.get_encoding("cl100k_base")
+        except Exception:
+            # As a last resort, use p50k_base which is widely available
+            encoding = tiktoken.get_encoding("p50k_base")
+    test_dataset_filtered = test_dataset.filter(
+        lambda x: gpt_tokenize(x["text"], encoding) <= get_model_limit(model_name_or_path),
         desc="Filtering",
         load_from_cache_file=False,
     )
-    openai_key = os.environ.get("OPENAI_API_KEY", None)
-    if openai_key is None:
-        raise ValueError(
-            "Must provide an api key. Expected in OPENAI_API_KEY environment variable."
+    # If over-filtered to zero (e.g., unknown model limit too small), keep unfiltered dataset with a warning
+    if len(test_dataset_filtered) == 0 and len(test_dataset) > 0:
+        logger.warning(
+            f"After context filtering, 0 instances remain for model {model_name_or_path}. "
+            f"Falling back to no-length-filtering for this run. Consider setting DEFAULT_MODEL_LIMIT to a larger value."
         )
-    openai.api_key = openai_key
-    print(f"Using OpenAI key {'*' * max(0, len(openai_key) - 5) + openai_key[-5:]}")
+    else:
+        test_dataset = test_dataset_filtered
+    
+    # set the openrouter key (used for subset 10)
+    or_key = os.environ.get("OPENROUTER_API_KEY", None)
+    if or_key:
+        base_url = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+        # Keep compatibility with both old and new SDKs
+        openai.api_key = or_key
+        try:
+            openai.api_base = base_url  # old SDK
+        except Exception:
+            pass
+        try:
+            # new SDK global base_url
+            openai.base_url = base_url  # type: ignore[attr-defined]
+        except Exception:
+            pass
+        # Ensure env vars also reflect the desired base for any internal defaults
+        os.environ["OPENAI_API_KEY"] = or_key
+        os.environ["OPENAI_BASE_URL"] = base_url
+        # Instantiate a dedicated v1 client if available and store globally
+        global OPENAI_CLIENT
+        if _OpenAIClient is not None:
+            OPENAI_CLIENT = _OpenAIClient(api_key=or_key, base_url=base_url)
+        print(f"Using OpenRouter key {'*' * max(0, len(or_key) - 5) + or_key[-5:]}")
+    else:
+        # elsewise use the openai key
+        openai_key = os.environ.get("OPENAI_API_KEY", None)
+        if openai_key is None:
+            raise ValueError(
+                "Must provide an api key. Expected in OPENROUTER_API_KEY or OPENAI_API_KEY environment variable."
+            )
+        openai.api_key = openai_key
+        print(f"Using OpenAI key {'*' * max(0, len(openai_key) - 5) + openai_key[-5:]}")
     use_azure = model_args.pop("use_azure", False)
     if use_azure:
         openai.api_type = "azure"
         openai.api_base = "https://pnlpopenai3.openai.azure.com/"
         openai.api_version = "2023-05-15"
-    temperature = model_args.pop("temperature", 0.2)
-    top_p = model_args.pop("top_p", 0.95 if temperature > 0 else 1)
+
+    # set temperature = 0, top_p = 0 for self-consistency
+    temperature = model_args.pop("temperature", 0)
+    top_p = model_args.pop("top_p", 0 if temperature == 0 else 1)
     print(f"Using temperature={temperature}, top_p={top_p}")
+    use_langgraph = bool(model_args.pop("use_langgraph", False) or os.environ.get("USE_LANGGRAPH") == "1")
     basic_args = {
         "model_name_or_path": model_name_or_path,
     }
@@ -224,13 +319,23 @@ def openai_inference(
             output_dict = {"instance_id": instance_id}
             output_dict.update(basic_args)
             output_dict["text"] = f"{datum['text']}\n\n"
-            response, cost = call_chat(
-                output_dict["model_name_or_path"],
-                output_dict["text"],
-                use_azure,
-                temperature,
-                top_p,
-            )
+            if use_langgraph:
+                print(f"Using 🔧LangGraph for {output_dict['model_name_or_path']}")
+                response, cost = call_chat_via_langgraph(
+                    output_dict["model_name_or_path"],
+                    output_dict["text"],
+                    use_azure,
+                    temperature,
+                    top_p,
+                )
+            else:
+                response, cost = call_chat(
+                    output_dict["model_name_or_path"],
+                    output_dict["text"],
+                    use_azure,
+                    temperature,
+                    top_p,
+                )
             completion = response.choices[0].message.content
             total_cost += cost
             print(f"Total Cost: {total_cost:.2f}")
@@ -348,7 +453,7 @@ def anthropic_inference(
     anthropic = Anthropic(api_key=api_key)
     test_dataset = test_dataset.filter(
         lambda x: claude_tokenize(x["text"], anthropic)
-        <= MODEL_LIMITS[model_name_or_path],
+        <= get_model_limit(model_name_or_path),
         desc="Filtering",
         load_from_cache_file=False,
     )
@@ -499,12 +604,16 @@ def main(
         "existing_ids": existing_ids,
         "max_cost": max_cost,
     }
-    if model_name_or_path.startswith("claude"):
-        anthropic_inference(**inference_args)
-    elif model_name_or_path.startswith("gpt"):
+    # Prefer OpenRouter if key is provided regardless of model prefix (OpenAI-compatible endpoint)
+    if os.environ.get("OPENROUTER_API_KEY"):
         openai_inference(**inference_args)
     else:
-        raise ValueError(f"Invalid model name or path {model_name_or_path}")
+        if model_name_or_path.startswith("claude"):
+            anthropic_inference(**inference_args)
+        elif model_name_or_path.startswith("gpt"):
+            openai_inference(**inference_args)
+        else:
+            raise ValueError(f"Invalid model name or path {model_name_or_path}")
     logger.info("Done!")
 
 
@@ -525,8 +634,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_name_or_path",
         type=str,
-        help="Name of API model. Update MODEL* constants in this file to add new models.",
-        choices=sorted(list(MODEL_LIMITS.keys())),
+        help="Name of API model. Supports OpenRouter model ids when OPENROUTER_API_KEY is set.",
     )
     parser.add_argument(
         "--shard_id",
