@@ -128,29 +128,13 @@ export LANGCHAIN_PROJECT=my-swebench-run
 
 Supports two prompt strategies:
 
-#### Chain-of-Thought (CoT) Prompts
-- **Features**: Guides the model to think step by step
-- **Use Cases**: Complex logical reasoning tasks
-- **Advantages**: Improves reasoning quality and interpretability
-
-#### Self-Repair Prompts
-- **Features**: Encourages the model to self-check and repair
-- **Use Cases**: Code quality improvement
-- **Advantages**: Enhances accuracy of code fixes
+Chain-of-Thought (CoT) Prompts and Self-Repair Prompts
 
 ### 2. Inference Engine (`run_api.py`)
 
 #### Supported Models
-- **OpenAI**: GPT-4, GPT-5, GPT-3.5-turbo
-- **Anthropic**: Claude-3 series, Claude-2
-- **xAI**: Grok-code-fast-1
-- **OpenRouter**: Supports 100+ models
-
-#### Core Features
-- Automatic model routing and API management
-- Cost calculation and budget control
-- Resume capability and error recovery
-- Automatic context length filtering
+- **OpenAI**: GPT-5
+- **Anthropic**: Claude-Sonnet-4.5 
 
 ### 3. LangGraph Workflow (`langgraph_patch_flow.py`)
 
@@ -270,11 +254,6 @@ python -m swebench.harness.run_evaluation \
   --max_workers 1
 ```
 
-**Evaluation Metrics**:
-- **Success Rate**: Proportion of instances that pass tests
-- **Patch Quality**: Correctness of generated code patches
-- **Execution Time**: Time cost for inference and evaluation
-
 ### Subset 2: Quick Iteration Workflow
 
 > Suitable for quick iteration and debugging on 1-2 instances. The steps mirror subset 10: prepare subset, run BM25 retrieval, create text dataset, inference, then evaluation.
@@ -373,22 +352,3 @@ python -m swebench.harness.run_evaluation \
   --run_id openrouter-cl-sub2 \
   --max_workers 1
 ```
-
-#### LangGraph Features
-
-- **Intelligent Retry**: Automatically detects failures and retries
-- **State Management**: Maintains intermediate state during inference
-- **Conditional Branching**: Selects different processing paths based on result quality
-- **Error Recovery**: Intelligently handles various exception scenarios
-
-## Best Practices
-
-### 1. Prompt Engineering Strategies
-
-#### CoT vs Self-Repair Selection
-- **CoT**: Suitable for complex logical reasoning requiring step-by-step analysis
-- **Self-Repair**: Suitable for code quality improvement requiring self-checking
-
-#### Consistency Settings
-- **`--consistent true`**: Production environment, ensures consistent output format
-- **`--consistent false`**: Research environment, allows more creative output
